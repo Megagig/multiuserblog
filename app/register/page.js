@@ -21,7 +21,36 @@ const Register = () => {
           <h2 className="fw-bold lead mb-4">Register</h2>
 
           <form onSubmit={handleSubmit}>
-            <input type=" " />
+            <input
+              type=" text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="form-control p-3 mb-4"
+              placeholder="Your  Name"
+              required
+            />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="form-control p-3 mb-4"
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type=" password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="form-control p-3 mb-4"
+              placeholder="Your Password"
+              required
+            />
+            <button
+              className="btn btn-lg btn-primary w-100 mb-2"
+              disabled={loading}
+            >
+              {loading ? 'Please Wait...' : 'Submit'}
+            </button>
           </form>
         </div>
       </div>
