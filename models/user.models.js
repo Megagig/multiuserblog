@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 import uniqueValidator from 'mongoose-unique-validator';
 
 const userSchema = new mongoose.Schema(
@@ -29,6 +28,6 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.plugin(uniqueValidator, { message: '{VALUE} is already taken.' });
+userSchema.plugin(uniqueValidator, { message: 'Email is already taken.' });
 
 export default mongoose.models.User || mongoose.model('User', userSchema);

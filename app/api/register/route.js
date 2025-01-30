@@ -14,16 +14,8 @@ export async function POST(req) {
       password: await bcryptjs.hash(password, 10),
     }).save();
 
-    return NextResponse.json(user, {
-      status: 201,
-      success: 'true',
-      message: 'User created successfully',
-    });
+    return NextResponse.json({ success: 'User created successfully' });
   } catch (error) {
-    return NextResponse.json({
-      success: 'false',
-      message: error.message,
-      status: 400,
-    });
+    return NextResponse.json({ error: error.message }, { status: 422 });
   }
 }

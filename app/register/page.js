@@ -10,8 +10,37 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log(name, email, password);
+    try {
+      setLoading(true);
+      const response = await fetch(`${process.env.API}/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const data = await response.json();
+      // console.log(data);
+      if (!response.ok) {
+        toast.error(data.error);
+        setLoading(false);
+      } else {
+        toast.success(data.success);
+        setName('');
+        setEmail('');
+        setPassword('');
+        router.push('/login');
+      }
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+      toast.error('Something went wrong! please try again latter');
+    }
   };
 
   return (
@@ -38,7 +67,7 @@ const Register = () => {
               required
             />
             <input
-              type=" password"
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="form-control p-3 mb-4"
