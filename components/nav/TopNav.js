@@ -29,7 +29,10 @@ const TopNav = () => {
         </Link>
       </div>
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mt-4">
+        <Link className="nav-link" href="/login">
+          Login
+        </Link>
         <Link className="nav-link" href="/register">
           Register
         </Link>
