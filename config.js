@@ -7,8 +7,7 @@ const API =
     ? 'https://xxx.vercel.app/api'
     : 'http://localhost:3000/api';
 
-console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('MONGODB_URI:', MONGODB_URI);
+NEXTAUTH_SECRET = 'AJKDJFJSKDKLKEHE2893774038JKJJCSLFLLF';
 
 module.exports = {
   MONGODB_URI,
