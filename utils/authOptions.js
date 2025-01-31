@@ -4,36 +4,37 @@ import bcryptjs from 'bcryptjs';
 import dbConnect from '@/utils/dbConnect';
 
 export const authOptions = {
+  session: {
+    strategy: 'jwt',
+  },
+
   providers: [
     CredentialsProvider({
-      name: 'Credentials',
-      credentials: {
-        email: { label: 'Email', type: 'text', placeholder: 'email' },
-        password: { label: 'Password', type: 'password' },
-      },
-      async authorize(credentials) {
-        await connectDB();
+      async authorize(credentials, req) {
+        dbConnect();
         const { email, password } = credentials;
         const user = await User.findOne({ email });
         if (!user) {
-          throw new Error('User not found');
+          throw new Error('Invalid email or password');
         }
-        const isMatch = await bcryptjs.compare(password, user.password);
-        if (!isMatch) {
-          throw new Error('Invalid password');
+        //if the user has no password (i.e they signed up via a social network, throw an error)
+        if (!user?.password) {
+          throw new Error('Please login via the method you used to signup');
+        }
+        const isPasswordMatch = await bcryptjs.compare(
+          password,
+          user?.password
+        );
+        if (!isPasswordMatch) {
+          throw new Error('Invalid email or password');
         }
         return user;
       },
     }),
   ],
-  secret: process.env.SECRET,
+
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: '/login',
-    error: '/login',
-    verifyRequest: '/login',
-    verifyRequest: '/login',
-    signOut: '/login',
-    error: '/login',
-    error: '/login',
   },
 };
