@@ -2358,17 +2358,6 @@ module.exports = createProxy("/home/megagig/Desktop/MERN/multiuserblog/node_modu
 
 /***/ }),
 
-/***/ "(rsc)/./node_modules/next/dist/client/components/not-found-error.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/next/dist/client/components/not-found-error.js ***!
-  \*********************************************************************/
-/***/ ((module, exports, __webpack_require__) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nObject.defineProperty(exports, \"default\", ({\n    enumerable: true,\n    get: function() {\n        return NotFound;\n    }\n}));\nconst _jsxruntime = __webpack_require__(/*! react/jsx-runtime */ \"(rsc)/./node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-runtime.js\");\nconst _errorfallback = __webpack_require__(/*! ./http-access-fallback/error-fallback */ \"(rsc)/./node_modules/next/dist/client/components/http-access-fallback/error-fallback.js\");\nfunction NotFound() {\n    return /*#__PURE__*/ (0, _jsxruntime.jsx)(_errorfallback.HTTPAccessErrorFallback, {\n        status: 404,\n        message: \"This page could not be found.\"\n    });\n}\nif ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {\n    Object.defineProperty(exports.default, '__esModule', {\n        value: true\n    });\n    Object.assign(exports.default, exports);\n    module.exports = exports.default;\n} //# sourceMappingURL=not-found-error.js.map\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NsaWVudC9jb21wb25lbnRzL25vdC1mb3VuZC1lcnJvci5qcyIsIm1hcHBpbmdzIjoiOzs7OzJDQUVBOzs7ZUFBd0JBOzs7OzJDQUZnQjtBQUV6QixTQUFTQTtJQUN0QixxQkFDRSxxQkFBQ0MsZUFBQUEsdUJBQXVCO1FBQ3RCQyxRQUFRO1FBQ1JDLFNBQVE7O0FBR2QiLCJzb3VyY2VzIjpbIi9ob21lL21lZ2FnaWcvc3JjL2NsaWVudC9jb21wb25lbnRzL25vdC1mb3VuZC1lcnJvci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSFRUUEFjY2Vzc0Vycm9yRmFsbGJhY2sgfSBmcm9tICcuL2h0dHAtYWNjZXNzLWZhbGxiYWNrL2Vycm9yLWZhbGxiYWNrJ1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBOb3RGb3VuZCgpIHtcbiAgcmV0dXJuIChcbiAgICA8SFRUUEFjY2Vzc0Vycm9yRmFsbGJhY2tcbiAgICAgIHN0YXR1cz17NDA0fVxuICAgICAgbWVzc2FnZT1cIlRoaXMgcGFnZSBjb3VsZCBub3QgYmUgZm91bmQuXCJcbiAgICAvPlxuICApXG59XG4iXSwibmFtZXMiOlsiTm90Rm91bmQiLCJIVFRQQWNjZXNzRXJyb3JGYWxsYmFjayIsInN0YXR1cyIsIm1lc3NhZ2UiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/dist/client/components/not-found-error.js\n");
-
-/***/ }),
-
 /***/ "(rsc)/./node_modules/next/dist/client/components/render-from-template-context.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/next/dist/client/components/render-from-template-context.js ***!
