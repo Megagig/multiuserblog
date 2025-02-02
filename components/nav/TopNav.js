@@ -6,7 +6,7 @@ const TopNav = () => {
   const { data, status, loading } = useSession();
   console.log(data, status);
   return (
-    <nav className="nav shadow justify-content-between mb-2">
+    <nav className="nav shadow justify-content-between mb-4">
       <div className="d-flex justify-content-start">
         <Link className="nav-link" href="/">
           🌀 Megagig

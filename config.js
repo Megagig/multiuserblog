@@ -7,11 +7,12 @@ const API =
     ? 'https://xxx.vercel.app/api'
     : 'http://localhost:3000/api';
 
-NEXTAUTH_SECRET = 'AJKDJFJSKDKLKEHE2893774038JKJJCSLFLLF';
+const NEXTAUTH_SECRET = 'AJKDJFJSKDKLKEHE2893774038JKJJCSLFLLF';
 
 module.exports = {
   MONGODB_URI,
   API,
+  NEXTAUTH_SECRET,
 };
 
 // "mongodb://megagig:overcomer@46.202.140.97:27017/multiuserblog?authSource=admin"
