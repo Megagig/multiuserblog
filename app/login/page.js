@@ -11,9 +11,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
-
   const searchParams = useSearchParams();
-
   const callbackUrl = searchParams.get('callbackUrl') || '/';
 
   const handleSubmit = async (e) => {
